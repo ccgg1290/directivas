@@ -6,5 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'directivas_app';
+  titulo = 'directivas registro usuario';
+  mensaje='';
+  registrado=false;
+  nombre:String="";
+  apellido:String="";
+  entradas: any;
+
+  constructor(){
+
+    this.entradas=[
+
+        {titulo:"Python ada dia am spresente"},
+        {titulo:"Java presente hac 20 años"}, 
+        {titulo:"javascript cada dia mas funcional"},
+        {titulo:"Kotil potencia apra tus apps"},
+        {titulo:"donde quedo pascal"}
+    ]
+
+
+  
+
+  }
+
+  registrarUsuario(){
+
+    this.registrado=true;
+    this.mensaje="usuario registrado con exito"
 }
+}
+
