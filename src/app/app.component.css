@@ -1,0 +1,8 @@
+.paraDirectors{
+
+    color: red;
+    /* negrita */
+    font-weight: bold; 
+    /* subrayado */
+    text-decoration: underline;
+}

@@ -12,6 +12,7 @@ export class AppComponent {
   nombre:String="";
   apellido:String="";
   entradas: any;
+  cargo:String="";
 
   constructor(){
 

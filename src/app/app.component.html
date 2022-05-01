@@ -10,12 +10,14 @@
     
 
 
-<!--input type="text" name="nombre" [(ngModel="nombre")]> <br>
-<input type="text" name="apellido" [(ngModel="apellido")]> <br -->
+<input type="text" name="nombre" [(ngModel)]="nombre"> <br>
+<input type="text" name="apellido" [(ngModel)]="apellido"> <br >
+<input type="text" name="cargo" [(ngModel)]="cargo"> <br >
 
 
-<input type="text" name="nombre" ><br>
-<input type="text" name="apellido" ><br>
+
+<!-- <input type="text" name="nombre" ><br> -->
+<!-- <input type="text" name="apellido" ><br> -->
 
 
 <input type="submit" name="registrar" (click)="registrarUsuario()"><br>
@@ -28,7 +30,9 @@
 <br>
 
 <!-- nostrar este parrafo solo si se le da al boton de registrar  ..es afeta la estructura del dom-->
-<p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre de: {{nombre}} {{apellido}}</p>
+<!-- usar ng style para para agregar para aplicar estilo de acuerdo a alguna condicion-->
+<p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre de: {{nombre}} {{apellido}}
+     , y tiene el cargo de : <span [ngStyle]="{color: cargo=='director' ? 'red':'black' }"> {{cargo}} </span> </p>
 
 
 <ng-template #sinRegistrar>
