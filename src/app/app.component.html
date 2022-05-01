@@ -32,7 +32,7 @@
 <!-- nostrar este parrafo solo si se le da al boton de registrar  ..es afeta la estructura del dom-->
 <!-- usar ng style para para agregar para aplicar estilo de acuerdo a alguna condicion-->
 <p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre de: {{nombre}} {{apellido}}
-     , y tiene el cargo de : <span [ngStyle]="{color: cargo=='director' ? 'red':'black' }"> {{cargo}} </span> </p>
+     , y tiene el cargo de : <span [ngClass]="{paraDirectores: cargo=='director' }"> {{cargo}} </span> </p>
 
 
 <ng-template #sinRegistrar>
